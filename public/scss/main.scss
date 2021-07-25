@@ -1,0 +1,304 @@
+@import "../scss/var";
+@import "../scss/mixin";
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: $text-color;
+}
+a:hover {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+// NAVBAR STYLING
+
+.main_header {
+  width: 100%;
+  line-height: 10rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+    $main-color;
+
+  & .navbar-brand {
+    color: $primary-color;
+    animation: donate 1s linear infinite;
+    animation-direction: alternate;
+
+    & .fas {
+      font-size: 4rem;
+    }
+    @keyframes donate {
+      from {
+        transform: rotate(5deg);
+      }
+      to {
+        transform: rotate(-5deg);
+      }
+    }
+    &:hover {
+      filter: drop-shadow(0 1.5rem 1rem);
+    }
+  }
+
+  & .navbar-nav {
+    padding-left: 10rem;
+    & .nav-item .nav-link {
+      font-size: 1.6rem;
+      color: $text-color;
+      text-transform: uppercase;
+      padding-right: 3rem;
+    }
+    & .nav-item:last-child > .nav-link {
+      padding-right: 0;
+    }
+  }
+  & .nav-item:hover > .nav-link,
+  & .navbar-brand:hover,
+  & .navbar-brand:hover > .fas {
+    color: $primary-color;
+  }
+  & .my_btn {
+    @include mybtn;
+
+    &:hover {
+      @include hovereffects;
+      color: $primary-color;
+    }
+  }
+}
+
+// NAVBAR STYLING END
+
+//MAIN CONTENT STYLING
+
+.home_btn {
+  @include mybtn;
+}
+
+.home_btn:hover {
+  color: $primary-color;
+  background: $text-color;
+}
+.header_hero {
+  width: 100%;
+  height: 80vh;
+  background: $main-color;
+
+  &__text {
+    height: 80vh;
+    @include content_center(flex-start);
+
+    & h2 {
+      color: $text-color;
+      font-size: 4rem;
+      margin-bottom: 3rem;
+      line-height: 150%;
+      font-weight: 600;
+
+      & span {
+        color: $primary-color;
+        text-transform: capitalize;
+      }
+    }
+
+    & p {
+      font-size: 1.8rem;
+      color: $text-color;
+      margin-bottom: 5rem;
+    }
+  }
+
+  //image
+}
+
+.header_hero__img {
+  height: 70vh;
+  @include content_center(flex-end);
+  animation: anime_hero 4s linear infinite alternate;
+  @keyframes anime_hero {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  & img {
+    filter: drop-shadow(0 1.5rem 1rem rgba(0, 0, 0, 0.8));
+  }
+}
+
+//responsive code
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .main_header {
+    line-height: 5rem;
+    text-align: center;
+    padding: 0 2rem;
+
+    & .navbar-nav {
+      padding-left: 3rem;
+      & .nav-item .nav-link {
+        padding-right: 0%;
+      }
+    }
+
+    .navbar .navbar-toggler {
+      border-color: white;
+      color: $text-color;
+    }
+    .navbar-toggler:focus {
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+
+  .header_hero__text {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .header_hero__text a {
+    display: block;
+    text-align: center;
+  }
+  .header_hero__text {
+    margin-top: 2rem;
+  }
+
+  .header_hero__img {
+    display: none;
+  }
+}
+
+//MAIN CONTENT STYLING END
+
+//ABOUT STYLING
+
+.about {
+  background-color: $primary-color;
+}
+.about_heading {
+  color: $text-color;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  line-height: 150%;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.about_text {
+  font-size: 1.8rem;
+  color: $main-color;
+  margin-bottom: 5rem;
+}
+//ABOUT STYLING END
+
+//GALLERY STYLING
+
+.gallery {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.gallery_head,
+.contact_head {
+  color: $primary-color;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  line-height: 150%;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.gallery_img {
+  border: 1px solid $primary-color;
+  border-radius: 30px;
+  padding: 5px;
+  margin-bottom: 50px;
+  width: 100%;
+  transition: transform 0.8s ease;
+
+  @include content_center(center);
+}
+
+.gallery_img:hover {
+  transform: scale(1.1);
+}
+//GALLERY STYLING END
+
+//contact styling
+
+.contact {
+  background-color: $main-color;
+}
+
+.contact_i {
+  color: $text-color;
+  font-size: 12rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  @include content_center(center);
+}
+
+.contact_i:hover {
+  color: $primary-color;
+  filter: drop-shadow(0 0.5rem 0.5rem);
+}
+//contact styling end
+
+//form styling
+.form_main {
+  width: 100%;
+  height: 100vh;
+  background: $main-color;
+}
+
+.form_main_header {
+  color: $text-color;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  padding-top: 100px;
+  line-height: 150%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-control,
+.custom-select,
+.form_i,
+.form_btn,
+.form_btnn {
+  padding: 0.8rem 3.2rem;
+  background: $primary-color;
+  line-height: 3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $text-color;
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  outline: none;
+}
+
+.form_btn:hover {
+  background-color: $text-color;
+  color: $primary-color;
+  transform: scale(1.1);
+}
+
+//form styling end

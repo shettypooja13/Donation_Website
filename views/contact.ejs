@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/contact.css">
+    <link rel="icon" href="./images/icon1.png" type="image/icon type">
+    <title>Toodreams</title>
+</head>
+<body>
+    <header class="text-gray-500 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="/"> 
+            <img src="./images/icon2.png" class="logo" alt="" style="width: 50px; height: 55px" >
+            <span class="ml-3 text-xl">Toodreams</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="/" class="mr-5 hover:text-white">Home</a>
+            <a href="/donate" class="mr-5 bg-red-500  text-black hover:text-white  border-0 py-1 px-3 focus:outline-none hover:bg-red-600 rounded text-lg">Donate</a>
+            <a href="/Our-Team" class="mr-5 hover:text-white">Our Team</a>
+            <a href="/contact" class="mr-5 text-white">Contact</a>
+            <a href="/logout" class="mr-5 hover:text-white">Log Out</a>
+          </nav>
+        </div>
+      </header>
+      <section class="text-gray-700 body-font relative">
+        <div class="container px-5 py-24 mx-auto flex sm:flex-no-wrap flex-wrap">
+          <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d965298.397882776!2d73.075759!3d19.077061!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3bcfc41e9c9cd6f9%3A0x1b2f22924be04fb6!2sMaharashtra!3m2!1d19.7514798!2d75.7138884!4m5!1s0x3be7c3db5e2c85cd%3A0xef26c52d7d73816e!2sSIES%20Graduate%20School%20of%20Technology%2C%20Sri%20Chandrasekarendra%20Saraswati%20Vidyapuram%20Sector-V%2C%20Nerul%2C%20Navi%20Mumbai%2C%20Maharashtra%20400706!3m2!1d19.042813!2d73.023078!5e0!3m2!1sen!2sin!4v1619680816064!5m2!1sen!2sin" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+            <div class="bg-white relative flex flex-wrap py-6">
+              <div class="lg:w-1/2 px-6">
+                <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">ADDRESS</h2>
+                <p class="leading-relaxed">8/Sheetal Apt, M. Phule Road, Vishnu Nagar, Dombivli[W]</p>
+              </div>
+              <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm">EMAIL</h2>
+                <a class="text-green-500 leading-relaxed">poojashetty1003@gmail.com</a>
+              </div>
+            </div>
+          </div>
+            <form  class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0" action="/send"  method="POST" id="my-form">
+            <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Contact</h2>
+            <p class="leading-relaxed mb-5 text-gray-600">Want to get in touch? We'd love to hear from you</p>
+            <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4" placeholder="Name" type="text" name="Name">
+            <input class="bg-white rounded border border-gray-400 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4" placeholder="Email" name="Email">
+            <textarea class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-green-500 text-base px-4 py-2 mb-4 resize-none" placeholder="Message"  name="Message"></textarea>
+            <button class="text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg" id="my-form-button" type="submit" value="Submit">Submit</button>
+            <h2 class="font-medium title-font text-blue border-0 py-2 px-15 focus:outline-none text-lg" id="my-form-status"></h2>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="text-gray-500 bg-gray-900 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <img src="./asset/icon2.png" class="logo" alt="">
+            <span class="ml-3 text-xl">Toodreams</span>
+          </a>
+          <p class="text-sm text-gray-600 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2021 Toodreams  @Pooja Shetty</a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-600">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-600">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-600">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-600">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>
+
+
